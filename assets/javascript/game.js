@@ -1,12 +1,13 @@
 //global variables//
 
-var wordChoices = ['mexico', 'australia', 'brazil', 'belgium', 'austria']
+var wordChoices = ["mason", "ciara", "sage", "hopkins", "lorenzo", "dashawn", "amari", "jevaun", "jaquez", "davonte", "zione"]
 var guessesLeft;
 var guessedLetters;
 var activeWordArray;
 var wins = 0;
 var losses = 0
 var blanks = [];
+var word = wordChoices[Math.floor(Math.random() * wordChoices.length)];
 
 function start() {
   correctGuess = 0;
@@ -19,7 +20,7 @@ function start() {
   document.getElementById("losses").innerHTML = losses;
   document.getElementById("guessesLeft").innerHTML = guessesLeft;
   document.getElementById("guessedLetters").innerHTML = guessedLetters;
-  document.getElementById('starting').innerHTML = ("press any letter to start");
+  document.getElementById('starting').innerHTML = ("<h1>Press Any Letter To Start</h1>");
 
 wordChoice();
 }
@@ -28,8 +29,8 @@ wordChoice();
 
 
 function wordChoice() {
-  word = wordChoices[Math.floor(Math.random() * wordChoices.length)];
-  console.log(word);
+
+
   activeWordArray = word.split('');
 
   // blankSpaces = word.length;
@@ -64,6 +65,7 @@ document.onkeyup = function(event) {
       }
       if (blanks.indexOf(" __ ")< 0){
         wins++;
+        document.getElementById("display").innerHTML = word;
         start();
       }
     }
