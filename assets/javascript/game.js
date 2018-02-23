@@ -1,6 +1,6 @@
 //global variables//
 
-var wordChoices = ["mason", "ciara", "sage", "hopkins", "lorenzo", "dashawn", "amari", "jevaun", "jaquez", "davonte", "zione"]
+var wordChoices = ["mason", "ciara", "sage", "hopkins", "lorenzo", "dayshawn", "amari", "jevaun", "jaquez", "davonte", "zione"]
 var guessesLeft;
 var guessedLetters;
 var activeWordArray;
